@@ -2,25 +2,25 @@ package exercises
 
 import "fmt"
 
-func hello() {
+func Hello() {
 	fmt.Println("Hello World")
 }
 
-func helloName() {
+func HelloName() {
 	fmt.Println("Hello Andrew")
 }
 
-func helloScanName() {
+func HelloScanName() {
 	var name string
 	fmt.Scan(&name)
 	fmt.Printf("Hello %s\n", name)
 }
 
-func remainder(min, max int) {
+func Remainder(min, max int) {
 	fmt.Println(max % min)
 }
 
-func evens() {
+func Evens() {
 	for i := 0; i <= 100; i++ {
 		if i%2 == 0 {
 			fmt.Println(i)
@@ -28,25 +28,39 @@ func evens() {
 	}
 }
 
-func fizzbuzz() {
+func FizzBuzz() {
 	for i := 0; i <= 100; i++ {
+		fmt.Printf("%d ", i)
 		if i%3 == 0 {
 			fmt.Print("Fizz")
-		} else if i%5 == 0 {
+		}
+		if i%5 == 0 {
 			fmt.Print("Buzz")
-		} else {
-			fmt.Print(i)
 		}
 		fmt.Println()
 	}
 }
 
-func threesandfives() {
+func ThreesAndFives() {
 	var sum int
-	for i := 0; i <= 1000; i++ {
+	for i := 1; i <= 1000; i++ {
 		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
 	}
 	fmt.Println(sum)
+}
+
+func Half(n int) (int, bool) {
+	return n / 2, n/2 == 0
+}
+
+func Greatest(numbers ...int) int {
+	var largest int
+	for _, v := range numbers {
+		if v > largest {
+			largest = v
+		}
+	}
+	return largest
 }

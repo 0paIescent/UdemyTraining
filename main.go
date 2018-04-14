@@ -1,8 +1,13 @@
 package main
 
+import "github.com/0paIescent/UdemyTraining/exercises"
+
 func main() {
-	// res, _ := http.Get("http://www.google.com")
-	// page, _ := ioutil.ReadAll(res.Body)
-	// fmt.Printf("%s", page)
-	hello()
+	// exercises.Hello()
+	// exercises.HelloName()
+	// exercises.HelloScanName()
+	// exercises.Remainder(10, 14)
+	// exercises.Evens()
+	exercises.FizzBuzz()
+	// exercises.ThreesAndFives()
 }
